@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.primary-placeholder::placeholder {
+  color: #274472;
+}
+.light1-placeholder::placeholder {
+  color: #5885af;
+}
+
+.modal-backdrop.fade {
+  opacity: 0.2 !important;
+}
+@media (min-width: 1440px) {
+  .navbar-expand-2xl {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  .navbar-expand-2xl .navbar-nav {
+    flex-direction: row;
+  }
+
+  .navbar-expand-2xl .dropdown-menu {
+    position: absolute;
+  }
+
+  .navbar-expand-2xl .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .navbar-expand-custom > .container {
+    flex-wrap: nowrap;
+  }
+
+  .navbar-expand-2xl .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+
+  .navbar-expand-2xl .navbar-toggler {
+    display: none;
+  }
+}
+
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* animation on pages  */
+
+.page {
+  position: absolute;
+  left: 15px;
+  right: 15px;
+}
+
+.page-enter {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 400ms, transform 400ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 400ms, transform 400ms;
+}
